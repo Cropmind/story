@@ -822,6 +822,109 @@
 
 <div class="divider"></div>
 
+<!-- ─── THE STACK ─── -->
+<section style="background: var(--darker); padding: 6rem 2rem;">
+  <div class="container-wide">
+    <p class="section-tag reveal">The Intelligence Stack</p>
+    <h2 class="section-title reveal reveal-delay-1">Nine services. One platform.<br>Built by two people.</h2>
+    <div class="section-body reveal reveal-delay-2">
+      <p>Every layer of the CropMind intelligence stack is a production service, deployed on Google Cloud Run, callable from the mobile app or backend pipeline. These are not prototypes. They are running for paying growers right now.</p>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; margin-top: 3rem;">
+
+      <div style="grid-column: 1 / -1; margin-bottom: 0.5rem;">
+        <span style="font-family: 'Courier New', monospace; font-size: 0.65rem; letter-spacing: 0.25em; color: var(--muted); text-transform: uppercase;">See — What is in the field right now</span>
+      </div>
+
+      <div class="founder-card reveal reveal-delay-1">
+        <div style="font-family: 'Courier New', monospace; font-size: 0.6rem; letter-spacing: 0.2em; color: var(--green); text-transform: uppercase; margin-bottom: 0.75rem;">fruit-detection</div>
+        <div style="font-size: 1rem; color: var(--white); margin-bottom: 0.5rem;">Berry Cluster Detection</div>
+        <div style="font-size: 0.85rem; color: var(--muted);">YOLOv9 model counts berries, identifies clusters, and feeds yield estimation. Fine-tuned on CropMind's annotated vineyard dataset.</div>
+        <div style="margin-top: 1rem; font-family: 'Courier New', monospace; font-size: 0.6rem; color: var(--green-dim);">Python · FastAPI · Cloud Run</div>
+      </div>
+
+      <div class="founder-card reveal reveal-delay-2">
+        <div style="font-family: 'Courier New', monospace; font-size: 0.6rem; letter-spacing: 0.2em; color: var(--green); text-transform: uppercase; margin-bottom: 0.75rem;">TEED-edge-detection</div>
+        <div style="font-size: 1rem; color: var(--white); margin-bottom: 0.5rem;">Vine Structure Edge Detection</div>
+        <div style="font-size: 0.85rem; color: var(--muted);">Tuned TEED model extracts vine structure edges from field photos — the visual preprocessing layer before object detection.</div>
+        <div style="margin-top: 1rem; font-family: 'Courier New', monospace; font-size: 0.6rem; color: var(--green-dim);">Python · TEED · Cloud Run</div>
+      </div>
+
+      <div class="founder-card reveal reveal-delay-3">
+        <div style="font-family: 'Courier New', monospace; font-size: 0.6rem; letter-spacing: 0.2em; color: var(--green); text-transform: uppercase; margin-bottom: 0.75rem;">depth-estimation-api</div>
+        <div style="font-size: 1rem; color: var(--white); margin-bottom: 0.5rem;">3D Depth for Fruit Counting</div>
+        <div style="font-size: 0.85rem; color: var(--muted);">Monocular depth estimation (Depth Anything + Depth Pro) separates foreground berries from background foliage to improve counting accuracy.</div>
+        <div style="margin-top: 1rem; font-family: 'Courier New', monospace; font-size: 0.6rem; color: var(--green-dim);">Python · FastAPI · Cloud Run</div>
+      </div>
+
+      <div style="grid-column: 1 / -1; margin: 1.5rem 0 0.5rem;">
+        <span style="font-family: 'Courier New', monospace; font-size: 0.65rem; letter-spacing: 0.25em; color: var(--muted); text-transform: uppercase;">Know — The field in context</span>
+      </div>
+
+      <div class="founder-card reveal reveal-delay-1">
+        <div style="font-family: 'Courier New', monospace; font-size: 0.6rem; letter-spacing: 0.2em; color: var(--green); text-transform: uppercase; margin-bottom: 0.75rem;">row-finder-api</div>
+        <div style="font-size: 1rem; color: var(--white); margin-bottom: 0.5rem;">Field Row Geometry</div>
+        <div style="font-size: 0.85rem; color: var(--muted);">FFT-based row detection from aerial imagery — returns row direction, spacing, and count without manual georeferencing.</div>
+        <div style="margin-top: 1rem; font-family: 'Courier New', monospace; font-size: 0.6rem; color: var(--green-dim);">Python · FastAPI · Cloud Run</div>
+      </div>
+
+      <div class="founder-card reveal reveal-delay-2">
+        <div style="font-family: 'Courier New', monospace; font-size: 0.6rem; letter-spacing: 0.2em; color: var(--green); text-transform: uppercase; margin-bottom: 0.75rem;">aerial-data-visualization-api</div>
+        <div style="font-size: 1rem; color: var(--white); margin-bottom: 0.5rem;">Satellite Index Heatmaps</div>
+        <div style="font-size: 0.85rem; color: var(--muted);">Converts raw GeoTiff satellite imagery into NDVI, NDMI, and NDWI overlays. Makes canopy stress visible across an entire block.</div>
+        <div style="margin-top: 1rem; font-family: 'Courier New', monospace; font-size: 0.6rem; color: var(--green-dim);">Python · rasterio · Cloud Run</div>
+      </div>
+
+      <div class="founder-card reveal reveal-delay-3">
+        <div style="font-family: 'Courier New', monospace; font-size: 0.6rem; letter-spacing: 0.2em; color: var(--green); text-transform: uppercase; margin-bottom: 0.75rem;">gdd_microservice</div>
+        <div style="font-size: 1rem; color: var(--white); margin-bottom: 0.5rem;">Growing Degree Days</div>
+        <div style="font-size: 0.85rem; color: var(--muted);">Calculates GDD accumulation from temperature data. The underlying engine for stage-crossing alerts and harvest timing predictions.</div>
+        <div style="margin-top: 1rem; font-family: 'Courier New', monospace; font-size: 0.6rem; color: var(--green-dim);">Python · FastAPI · Cloud Run</div>
+      </div>
+
+      <div style="grid-column: 1 / -1; margin: 1.5rem 0 0.5rem;">
+        <span style="font-family: 'Courier New', monospace; font-size: 0.65rem; letter-spacing: 0.25em; color: var(--muted); text-transform: uppercase;">Predict — What is coming</span>
+      </div>
+
+      <div class="founder-card reveal reveal-delay-1">
+        <div style="font-family: 'Courier New', monospace; font-size: 0.6rem; letter-spacing: 0.2em; color: var(--green); text-transform: uppercase; margin-bottom: 0.75rem;">brix-forecast</div>
+        <div style="font-size: 1rem; color: var(--white); margin-bottom: 0.5rem;">Sugar Prediction & Harvest Timing</div>
+        <div style="font-size: 0.85rem; color: var(--muted);">Adaptive sigmoid ML model forecasts Brix accumulation over time. Combines historical variety curves with real-time measurements to predict harvest date within days.</div>
+        <div style="margin-top: 1rem; font-family: 'Courier New', monospace; font-size: 0.6rem; color: var(--green-dim);">Python · FastAPI · scikit-learn · Cloud Run</div>
+      </div>
+
+      <div class="founder-card reveal reveal-delay-2">
+        <div style="font-family: 'Courier New', monospace; font-size: 0.6rem; letter-spacing: 0.2em; color: var(--green); text-transform: uppercase; margin-bottom: 0.75rem;">disease-pest-detection</div>
+        <div style="font-size: 1rem; color: var(--white); margin-bottom: 0.5rem;">Disease & Pest Recognition</div>
+        <div style="font-size: 0.85rem; color: var(--muted);">Vision classifiers identify powdery mildew, botrytis, leafroll, phylloxera, and more from field photos. Returns condition name, confidence, and action tier.</div>
+        <div style="margin-top: 1rem; font-family: 'Courier New', monospace; font-size: 0.6rem; color: var(--green-dim);">Python · YOLO · Cloud Run (crop33137)</div>
+      </div>
+
+      <div style="grid-column: 1 / -1; margin: 1.5rem 0 0.5rem;">
+        <span style="font-family: 'Courier New', monospace; font-size: 0.65rem; letter-spacing: 0.25em; color: var(--muted); text-transform: uppercase;">Act — The grower receives a decision</span>
+      </div>
+
+      <div class="founder-card reveal reveal-delay-1">
+        <div style="font-family: 'Courier New', monospace; font-size: 0.6rem; letter-spacing: 0.2em; color: var(--green); text-transform: uppercase; margin-bottom: 0.75rem;">notification-api</div>
+        <div style="font-size: 1rem; color: var(--white); margin-bottom: 0.5rem;">Grower Alert & Report Delivery</div>
+        <div style="font-size: 0.85rem; color: var(--muted);">Centralized notification service that delivers PDF reports, harvest alerts, and disease warnings to growers via email. Handles attachments up to 25MB.</div>
+        <div style="margin-top: 1rem; font-family: 'Courier New', monospace; font-size: 0.6rem; color: var(--green-dim);">Node.js · Cloud Run</div>
+      </div>
+
+      <div class="founder-card reveal reveal-delay-2">
+        <div style="font-family: 'Courier New', monospace; font-size: 0.6rem; letter-spacing: 0.2em; color: var(--green); text-transform: uppercase; margin-bottom: 0.75rem;">cropmind-grape-web-app</div>
+        <div style="font-size: 1rem; color: var(--white); margin-bottom: 0.5rem;">The Grower Platform</div>
+        <div style="font-size: 0.85rem; color: var(--muted);">Next.js web app where growers upload scans, view reports, track phenology, manage work orders, and see their vineyard's intelligence history.</div>
+        <div style="margin-top: 1rem; font-family: 'Courier New', monospace; font-size: 0.6rem; color: var(--green-dim);">Next.js · Firebase · Cloud Run</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
 <!-- ─── THE WRIGHT BROTHERS MOMENT ─── -->
 <section class="wright-section" id="the-moment">
   <div class="wright-bg-text">30</div>
